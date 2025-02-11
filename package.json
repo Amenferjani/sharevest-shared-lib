@@ -1,5 +1,5 @@
 {
-  "name": "@hfidhi/shared-lib",
+  "name": "@amenferjani/shared-lib",
   "version": "1.0.0",
   "description": "A shared library for the sharevest holdings",
   "main": "dist/index.js",
