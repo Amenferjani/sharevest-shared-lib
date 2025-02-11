@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES2021",
+        "outDir": "./dist",
+        "declarationDir": "./dist",
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strict": true,
+        "strictNullChecks": false,
+        "types": ["node"],
+        "noImplicitAny": false,
+    },
+    "include": ["src/**/*"]
+}
