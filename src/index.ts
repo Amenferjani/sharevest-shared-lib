@@ -57,3 +57,6 @@ export * from './rel-vest/entities/investor.entity';
 export * from './rel-vest/models/company.dto';
 export * from './rel-vest/models/event.dto';
 export * from './rel-vest/models/investor.dto';
+// Exporting from the payment-vest folder(DTOs and Entities)
+export * from './payment-vest/entities/payment-transaction.entity'
+export * from './payment-vest/models/payment-transaction.dto';
