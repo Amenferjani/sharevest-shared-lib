@@ -12,6 +12,9 @@ export class CreatePaymentDto {
     @IsString()
     sessionId: string;
 
+    @IsString()
+    intentId: string;
+
     @IsDecimal()
     amount: number;
 

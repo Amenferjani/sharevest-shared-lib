@@ -19,6 +19,9 @@ export class PaymentTransaction {
 
     @Column()
     sessionId: string;
+    
+    @Column()
+    intentId: string;
 
     @Column({ length: 50 })
     provider: string; 
