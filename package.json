@@ -1,6 +1,6 @@
 {
   "name": "@amenferjani/shared-lib",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "A shared library for the sharevest holdings",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

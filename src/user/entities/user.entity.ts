@@ -6,6 +6,12 @@ export enum RiskToleranceLevel {
     MEDIUM = 'medium',
     HIGH = 'high',
 }
+export enum SubscriptionPlan {
+    FREE = 'FREE',
+    SILVER = 'SILVER',
+    GOLD = 'GOLD',
+    PLATINUM = 'PLATINUM',
+}
 
 @Entity('users')
 export class User {
@@ -41,5 +47,11 @@ export class User {
 
     @Column('decimal', { precision: 5, scale: 2, default: 0.5 })
     overallRiskScore: number;
+
+    @Column({ type: 'enum', enum: SubscriptionPlan, default: SubscriptionPlan.FREE })
+    subscriptionPlan: SubscriptionPlan;
+
+    @Column({ type: 'timestamp', nullable: true })
+    subscriptionExpiresAt: Date;
 
 }

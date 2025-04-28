@@ -1,5 +1,5 @@
-import { IsEmail, IsNotEmpty, IsString, IsOptional, IsDecimal, IsEnum, IsNumber } from 'class-validator';
-import { RiskToleranceLevel } from '../entities/user.entity'; 
+import { IsEmail, IsNotEmpty, IsString, IsOptional, IsDecimal, IsEnum, IsNumber, IsDate } from 'class-validator';
+import { RiskToleranceLevel, SubscriptionPlan } from '../entities/user.entity'; 
 import { Role } from '../entities/role.entity';
 
 export class CreateUserDto {
@@ -34,4 +34,12 @@ export class CreateUserDto {
         maxDecimalPlaces: 2
     })
     overallRiskScore?: number;
+
+    @IsOptional()
+    @IsString()
+    subscriptionPlan?: SubscriptionPlan;
+
+    @IsOptional()
+    @IsDate()
+    subscriptionExpiresAt?: Date;
 }

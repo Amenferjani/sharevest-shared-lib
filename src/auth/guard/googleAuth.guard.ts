@@ -12,7 +12,7 @@ import { AuthGuard } from "@nestjs/passport";
             console.log("error : Unauthorized"); 
             throw err || new UnauthorizedException();
         }
-        console.log('User from Refresh JWT:', user); 
+        console.log('User from google auth:', user); 
         return user;
     }
 }
