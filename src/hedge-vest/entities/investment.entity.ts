@@ -42,7 +42,7 @@ export class Investment {
     @BeforeUpdate() 
     setDefaults() { 
         if (!this.status) { 
-            this.status = 'pending'; 
+            this.status = 'pending';
         } 
     }
 }

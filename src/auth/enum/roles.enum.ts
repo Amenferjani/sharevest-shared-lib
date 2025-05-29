@@ -5,7 +5,7 @@ export enum Role {
     ADMIN = 'admin',
     CAMPAIGN_MANAGER = 'campaign_manager',
     CAMPAIGN_CONTRIBUTOR = 'campaign_contributor',
-    FUND_MANAGER = 'fund_manager',
+    FUND_MANAGER = 'fund_manager',  
     PRIVATE_MANAGER = 'private_manager',
     HEDGE_INVESTOR = 'hedge_investor',
     PRIVATE_INVESTOR = 'private_investor',
@@ -13,5 +13,4 @@ export enum Role {
     REL_INVESTOR = 'rel_investor',
     //services scope :
     RISK_SERVICE = "risk_service"
-
 }

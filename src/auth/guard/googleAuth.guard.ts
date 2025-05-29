@@ -9,10 +9,10 @@ import { AuthGuard } from "@nestjs/passport";
 
     handleRequest(err, user) {
         if (err || !user) {
-            console.log("error : Unauthorized"); 
+            console.log("error : Unauthorized");
             throw err || new UnauthorizedException();
         }
-        console.log('User from google auth:', user); 
+        console.log('User from google auth:', user);
         return user;
     }
 }
