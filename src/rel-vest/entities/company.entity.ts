@@ -5,6 +5,7 @@ import {
     OneToMany,
     CreateDateColumn,
     UpdateDateColumn,
+    ManyToMany,
 } from 'typeorm';
 import { Event } from './event.entity';
 import { Investor } from './investor.entity';
@@ -41,7 +42,7 @@ export class Company {
     @OneToMany(() => Event, (event) => event.company, { cascade: true })
     events: Event[];
 
-    @OneToMany(() => Investor, (investor) => investor.company, { cascade: true })
+    @ManyToMany(() => Investor, (investor) => investor.companies)
     investors: Investor[];
 
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })

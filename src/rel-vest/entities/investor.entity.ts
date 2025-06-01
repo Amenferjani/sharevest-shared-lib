@@ -38,9 +38,13 @@
         @Column({ type: 'uuid' })
         companyId: string;
 
-        @ManyToOne(() => Company, (company) => company.investors, { onDelete: 'CASCADE' })
-        @JoinColumn({ name: 'companyId' })
-        company: Company;
+        @ManyToMany(() => Company, (company) => company.investors)
+        @JoinTable({
+            name: 'investor_companies',
+            joinColumn: { name: 'investorId', referencedColumnName: 'id' },
+            inverseJoinColumn: { name: 'companyId', referencedColumnName: 'id' },
+        })
+        companies: Company[];
 
         @ManyToMany(() => Event, (event) => event.investors, { onDelete: 'CASCADE' })
         @JoinTable()

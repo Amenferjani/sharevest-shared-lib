@@ -27,6 +27,9 @@ export class User {
     @Column()
     password: string;
 
+    @Column({default : false})
+    isEmailVerified: boolean;
+
     @ManyToMany(() => Role, role => role.users, { onDelete: 'CASCADE' }) // Add inverse relationship
     @JoinTable() // Ensure this decorator is present
     role: Role[];

@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsString, IsOptional, IsDecimal, IsEnum, IsNumber, IsDate } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString, IsOptional, IsDecimal, IsEnum, IsNumber, IsDate, IsBoolean } from 'class-validator';
 import { RiskToleranceLevel, SubscriptionPlan } from '../entities/user.entity'; 
 import { Role } from '../entities/role.entity';
 
@@ -13,6 +13,10 @@ export class CreateUserDto {
     @IsNotEmpty()
     @IsString()
     password: string;
+
+    @IsOptional()
+    @IsBoolean()
+    isEmailVerified: boolean ; 
 
     @IsOptional()
     role?: Role[];
