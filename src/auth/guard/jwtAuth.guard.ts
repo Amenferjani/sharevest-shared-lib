@@ -12,11 +12,11 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
     handleRequest(err, user, info) {
         if (err || !user) {
             console.log('Error:', err);
-            console.log('Info:', info);
+            // console.log('Info:', info);
             console.log('User:', user);
             throw err || new UnauthorizedException();
         }
-        console.log('User profile from Google OAuth:', user);
+        console.log('User profile from auth guard:', user);
         return user;
     }
 }

@@ -9,10 +9,6 @@ export class InvestorDto {
     @IsNotEmpty()
     name: string;
 
-    @IsUUID()
-    @IsNotEmpty()
-    companyId: string;
-
     @IsEmail({}, { message: 'Email must be a valid email address' })
     email: string;
 

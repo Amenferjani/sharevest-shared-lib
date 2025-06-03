@@ -35,9 +35,6 @@
         @Column({ type: 'varchar', length: 50, default: 'active' })
         status: 'active' | 'inactive';
 
-        @Column({ type: 'uuid' })
-        companyId: string;
-
         @ManyToMany(() => Company, (company) => company.investors)
         @JoinTable({
             name: 'investor_companies',
