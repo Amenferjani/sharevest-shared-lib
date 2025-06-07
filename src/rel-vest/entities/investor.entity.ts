@@ -44,7 +44,6 @@
         companies: Company[];
 
         @ManyToMany(() => Event, (event) => event.investors, { onDelete: 'CASCADE' })
-        @JoinTable()
         events: Event[];
 
         @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
