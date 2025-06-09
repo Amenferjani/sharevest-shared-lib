@@ -5,7 +5,7 @@ export enum Role {
     ADMIN = 'admin',
     CAMPAIGN_MANAGER = 'campaign_manager',
     CAMPAIGN_CONTRIBUTOR = 'campaign_contributor',
-    FUND_MANAGER = 'fund_manager',  
+    FUND_MANAGER = 'hedge_manager',  
     PRIVATE_MANAGER = 'private_manager',
     HEDGE_INVESTOR = 'hedge_investor',
     PRIVATE_INVESTOR = 'private_investor',
